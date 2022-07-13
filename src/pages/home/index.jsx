@@ -1,10 +1,11 @@
-import { Outlet } from "react-router-dom"
+import { Banner, Contact } from "../../components/home";
 
 const HomePage = () => {
   return (
 		<>
 			<div>This is home page</div>
-			<Outlet />
+			<Banner/>
+			<Contact/>
 		</>
 	);
 }
