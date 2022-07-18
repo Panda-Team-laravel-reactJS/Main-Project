@@ -1,4 +1,4 @@
-import { Banner, Contact } from "../../components/home";
+import { Banner, Contact } from "../components/home";
 
 const HomePage = () => {
   return (
