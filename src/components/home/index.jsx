@@ -1,4 +1,5 @@
 import Banner from "./Banner";
-import Contact from "./Contact";
+import Services from "./Services_price";
 
-export {Banner, Contact}
+
+export {Banner, Services}
