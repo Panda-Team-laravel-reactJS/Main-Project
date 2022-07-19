@@ -20,7 +20,7 @@ const Services = () => {
               Hot Stone Massage <br />
               20 phút Phục hồi da mặt
             </p>
-            <p>$30.00</p>
+            <p className="ser-name">$30.00</p>
           </div>
           <br />
           <div className="combo">
@@ -32,7 +32,7 @@ const Services = () => {
               Hot Stone Massage <br />
               20 phút Phục hồi da mặt
             </p>
-            <p>$30.00</p>
+            <p className="ser-name">$30.00</p>
           </div>
           <br />
           <div className="combo">
@@ -44,14 +44,14 @@ const Services = () => {
               Oriental Spa Manicure <br />
               20 phút Phục hồi da mặt
             </p>
-            <p>$30.00</p>
+            <p className="ser-name">$30.00</p>
           </div>
         </div>
         <div className="right-content">
           <div className="cont">
             <div className="name-title">
               <p className="spa">Spa May</p>
-              <p className="head">Hãy để chúng tôi phục vụ bạn</p>
+              <p className="head">HÃY ĐỂ CHÚNG TÔI PHỤC VỤ BẠN</p>
             </div>
             <button className="btn">Đặt dịch vụ </button>
           </div>
@@ -123,8 +123,8 @@ const Services = () => {
               src="http://mauweb.monamedia.net/helenspa/wp-content/uploads/2019/06/ic1.png"
               alt=""
             />
-            <p>Break from Routine</p>
-            <hr />
+            <p>Break from Routine</p> <br />
+            <hr /> <br />
             <p>
               Cách tốt nhất để thư giãn hoàn toàn và giảm căng thẳng cho chính
               mình.
@@ -136,7 +136,9 @@ const Services = () => {
               alt=""
             />
             <p>Improves Blood Circulation</p>
+            <br />
             <hr />
+            <br />
             <p>Cung cấp thêm oxy & chất dinh dưỡng cho các tế bào.</p>
           </div>
           <div className="re1">
@@ -145,7 +147,9 @@ const Services = () => {
               alt=""
             />
             <p>Manage Chronic Conditions</p>
+            <br />
             <hr />
+            <br />
             <p>
               Liệu pháp xoa bóp mang lại lợi ích vượt trội cho việc kiểm soát
               cơn đau.
@@ -157,7 +161,9 @@ const Services = () => {
               alt=""
             />
             <p>Body Mind & Soul</p>
+            <br />
             <hr />
+            <br />
             <p>
               Spa cải thiện cảm giác tốt và mang lại sự hài hòa cho cơ thể, tâm
               trí và tâm hồn.
@@ -169,7 +175,9 @@ const Services = () => {
               alt=""
             />
             <p>Deep Tissue Massage</p>
+            <br />
             <hr />
+            <br />
             <p>Chuyên gia trị liệu làm giảm căng thẳng cơ bắp và chuột rút.</p>
           </div>
           <div className="re1">
@@ -178,7 +186,9 @@ const Services = () => {
               alt=""
             />
             <p>Keeping Fit & Healthy</p>
+            <br />
             <hr />
+            <br />
             <p>Spa giảm cân thêm để giữ cho cơ thể của bạn trong hình dạng.</p>
           </div>
         </div>
