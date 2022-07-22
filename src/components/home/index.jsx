@@ -1,5 +1,5 @@
 import Banner from "./Banner";
-import Services from "./Services_price";
+import ServicesPrice from "./ServicesPrice";
 
 
-export {Banner, Services}
+export { Banner, ServicesPrice };
