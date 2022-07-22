@@ -1,4 +1,4 @@
-const product_Card = [
+const _Card = [
     {
         id:1,
         product_name: "Nguyen Thi Ngoc Linh",
