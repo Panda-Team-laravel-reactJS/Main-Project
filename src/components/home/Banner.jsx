@@ -1,7 +1,3 @@
-import "../../assets/scss/banner.scss";
-
-import $ from "jquery";
-
 const Banner = () => {
   return (
     <div className="container-fluid">

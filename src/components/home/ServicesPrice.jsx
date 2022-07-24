@@ -1,6 +1,3 @@
-import "../../assets/scss/Service.scss";
-
-import $ from "jquery";
 
 const Services = () => {
   return (
