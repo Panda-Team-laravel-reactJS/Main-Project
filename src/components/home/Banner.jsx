@@ -1,6 +1,6 @@
 import "../../assets/scss/banner.scss";
 
-import $ from 'jquery';
+
 
 const Banner = () => {
     
