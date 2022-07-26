@@ -1,4 +1,6 @@
 import HomePage from "./HomePage";
+import ServicesPage from "./ServicesPage";
+import ContactPage from "./ContactPage";
+import AboutUsPage from "./AboutUsPage";
 
-
-export {HomePage}
+export {HomePage, ServicesPage, ContactPage, AboutUsPage}
