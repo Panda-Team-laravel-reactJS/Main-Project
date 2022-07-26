@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { MainLayout } from "./layouts";
 import "./assets/scss/index.scss";
-import { HomePage, ServicesPage } from "./pages";
+import { HomePage, ServicesPage, ContactPage } from "./pages";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -12,6 +12,7 @@ root.render(
       <Route path="/" element={<MainLayout />}>
         <Route path="" element={<HomePage />} />
         <Route path="/Services" element={<ServicesPage />} />
+        <Route path="/contact" element={< ContactPage />} />
       </Route>
     </Routes>
   </BrowserRouter>
