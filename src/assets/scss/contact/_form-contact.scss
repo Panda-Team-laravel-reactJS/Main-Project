@@ -1,0 +1,60 @@
+.container-from-contact {
+  background-color: #f7f6ed;
+}
+
+h1 {
+  font-family: 'Cambria, Cochin, Georgia, Times, "Times New Roman", seri';
+  color: #b1a684;
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 24px;
+}
+
+.contact- {
+  &form {
+    text-align: center;
+    line-height: 3rem;
+    color: #757575;
+    font-size: 17px;
+  }
+  &table {
+    // margin-left: 32vw;
+    margin: auto;
+    margin-top: 2rem;
+    & tr {
+      padding: 2rem 0;
+      vertical-align: middle;
+      & input {
+        box-sizing: border-box;
+        height: 2rem;
+        width: 16rem;
+      }
+      & textarea {
+        margin-top: 0.6rem;
+        &:hover{
+            box-shadow: #fff 2px 2px 3px 3px;
+        }
+    }
+      & input, & textarea {
+        padding: 1rem 1rem;
+        background-color: transparent;
+        border: 2px solid #b1a684;
+        &:focus{
+            outline: transparent;
+            box-shadow: #abe2f5 1px 1px 3px 4px;
+        }
+      }
+    }
+  }
+  &btn {
+    font-size: 17px;
+    width: 20rem;
+    height: 2em;
+    background-color: #b1a684;
+    border: transparent;
+    &:hover {
+      cursor: pointer;
+      background-color: #abe2f5;
+    }
+  }
+}

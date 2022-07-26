@@ -1,0 +1,49 @@
+
+.container-infor-contact{
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    color: #b1a684;
+    background-color: #f7f6ed;
+
+}
+
+.infor-contact{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+    margin: 40px 20px;
+    font-family: 'Great Vibes';
+    color: #645d48;
+    padding: 3rem;
+    line-height: 3.5rem;
+
+    & .icons-contact{
+        font-size: 2.5rem;
+    }
+
+    & #info-box{
+        border: 1px solid #fff;
+        width: 90%;
+        font-size: 15px;
+        background-color: #fff;
+        margin: 0 auto;
+        box-shadow: white 2px 3px 5px;
+        & h2{
+            font-weight: 500;
+        }
+        & h3{
+            font-size: 15px;
+        }
+        & h4{
+            line-height: 3rem;
+        }
+
+    }
+
+  
+
+}
+    
+
+
+
