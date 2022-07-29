@@ -1,49 +1,42 @@
-
-.container-infor-contact{
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-    color: #b1a684;
-    background-color: #f7f6ed;
-
-}
-
-.infor-contact{
+.container-infor-contact {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #b1a684;
+  background-color: #f7f6ed;
+  .infor-contact {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     text-align: center;
     margin: 40px 20px;
-    font-family: 'Great Vibes';
+    font-family: "Great Vibes";
     color: #645d48;
     padding: 3rem;
     line-height: 3.5rem;
 
-    & .icons-contact{
-        font-size: 2.5rem;
+    & .icons-contact {
+      font-size: 2.5rem;
     }
 
-    & #info-box{
-        border: 1px solid #fff;
-        width: 90%;
-        font-size: 15px;
-        background-color: #fff;
-        margin: 0 auto;
-        box-shadow: white 2px 3px 5px;
-        & h2{
-            font-weight: 500;
-        }
-        & h3{
-            font-size: 15px;
-        }
-        & h4{
-            line-height: 3rem;
-        }
-
+    & .info-box {
+      width: 90%;
+      margin: 0 auto;
+      padding: 1rem 0;
+      font-size: 1rem;
+      background-color: #fff;
+      border: 1px solid #fff;
+      box-shadow: rgb(212, 212, 212) 5px 5px 6px;
+      &:hover {
+        transform: scale(1.05);
+      }
+      & h2 {
+        font-weight: 500;
+      }
+      & h3 {
+        font-size: 1rem;
+      }
+      & h4 {
+        line-height: 3rem;
+      }
     }
-
-  
-
+  }
 }
-    
-
-
-

@@ -2,18 +2,18 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header class="header-fixed">
+    <header className="header-fixed">
 
-	<div class="header-limiter">
+	<div className="header-limiter">
 
-		<h1><a href="/">Company<span>logo</span></a></h1>
+		<h1><a href="/">May<span>Spa</span></a></h1>
 
 		<nav>
-			<a href="/">TRANG CHỦ</a>
-			<a href="/AboutUs">GIỚI THIỆU</a>
-			<a href="#">DỊCH VỤ</a>
-			<a href="#">TIN TỨC</a>
-			<a href="#">LIÊN HỆ</a>
+			<Link to="/">TRANG CHỦ</Link>
+			<Link to="/AboutUs">GIỚI THIỆU</Link>
+			<Link to="/Services">DỊCH VỤ</Link>
+			<Link to="#">TIN TỨC</Link>
+			<Link to="/Contact">LIÊN HỆ</Link>
 		</nav>
 
 	</div>

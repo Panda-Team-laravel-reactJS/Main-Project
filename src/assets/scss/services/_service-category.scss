@@ -1,56 +1,66 @@
 .service-category {
-    margin: 0 10%;
-  
-    & .title {
-      text-align: center;
-      color: #620300;
-    }
-  
-    & .category-content {
+  margin: 3rem 10%;
+
+  & .title {
+    text-align: center;
+    color: #620300;
+    font-size: 170%;
+    margin: 1rem 0;
+  }
+
+  & .category-content {
+    display: flex;
+    gap: 2rem;
+    & .services-container {
+      width: 50%;
+      height: 50vh;
       display: flex;
-  
-      & .services-container {
-        width: 50%;
-        height: 50vh;
-        margin-right: 2rem;
+      flex-direction: column;
+      align-items: center;
+      overflow-y: scroll;
+
+      & .service {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        overflow-y: scroll;
-  
-        & .service {
-          display: flex;
-          margin: 1rem 0;
-          justify-content: space-between;
-          border: 9px solid #fff;
-          width: 100%;
-          background-color: #bcb293;
-          padding: 0.5rem 5rem;
-          color: #620300;
-          border-radius: 1.5rem;
-        }
+        margin-bottom: 1rem;
+        justify-content: space-between;
+        border: 9px solid #fff;
+        width: 100%;
+        background-color: #bcb294;
+        padding: 1rem 5rem;
+        color: #620300;
+      }
+      & h3 {
+        font-size: 150%;
+      }
+      & .service-btn {
+        margin: auto 0;
+        box-sizing: border-box;
 
-        & .service-btn {
-            margin: auto 0;
-            box-sizing: border-box;
+        & .btn-book-now {
+          padding: 0.5rem 1rem;
+          display: center;
+          background-color: whitesmoke;
+          color: #a50f0a;
+          font-size: 1.3rem;
+          box-shadow: #620300 2px 2px 4px;
+          border: transparent;
+          width: 5rem;
+          transition: width 1s ease-iout;
 
-            & .btn-book-now {
-                border-radius: 0.5rem;
-                padding: 0.5rem 1rem;
-                display: center;
-                background-color: #620300;
-                color: #fff;
-                &:hover {
-                    cursor: pointer;
-                }
-            }
+          &:hover {
+            cursor: pointer;
+            font-weight: 900;
+            width: 120%;
           }
+        }
       }
     }
-  
     & img {
       width: auto;
       height: 50vh;
     }
   }
+  &:nth-child(2n + 1) .category-content {
+    flex-direction: row-reverse;
+  }
+}

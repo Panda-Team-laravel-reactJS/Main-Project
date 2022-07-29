@@ -10,7 +10,7 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<MainLayout />}>
-        <Route path="" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/Services" element={<ServicesPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/AboutUs" element={<AboutUsPage />} />

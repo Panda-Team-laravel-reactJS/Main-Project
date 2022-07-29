@@ -3,7 +3,7 @@ const Service = ({ service }) => {
       <div className="service">
         <div>
           <h3>{service.name}</h3>
-          <p>{service.detail}</p>
+          <p>{service.description}</p>
           <p>{service.price}</p>
         </div>
         <div className="service-btn">
