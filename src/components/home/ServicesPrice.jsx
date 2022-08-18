@@ -1,59 +1,55 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { SERVICES_API_URL } from "../../utils/constants";
+import NumberHelper from "../../utils/NumberHelper";
+import { SectionTitle } from "../core";
 
-const Services = () => {
-  return (
-      <div className="container">
-        <div className="left-content">
-          <div className="name-title">
-            <p className="spa">Spa May</p>
-            <p className="head">Bảng giá dịch vụ </p>
-          </div>
-          <div className="combo">
-            <img
-              src="http://mauweb.monamedia.net/helenspa/wp-content/uploads/2019/07/Procedure-11-150x150.jpg"
-              alt=""
-            />
-            <p className="ser-name">
-              Hot Stone Massage <br />
-              20 phút Phục hồi da mặt
-            </p>
-            <p className="ser-name">$30.00</p>
-          </div>
-          <br />
-          <div className="combo">
-            <img
-              src="http://mauweb.monamedia.net/helenspa/wp-content/uploads/2019/07/Procedure-15-150x150.jpg"
-              alt=""
-            />
-            <p className="ser-name">
-              Hot Stone Massage <br />
-              20 phút Phục hồi da mặt
-            </p>
-            <p className="ser-name">$30.00</p>
-          </div>
-          <br />
-          <div className="combo">
-            <img
-              src="http://mauweb.monamedia.net/helenspa/wp-content/uploads/2019/07/Procedure-5-150x150.jpg"
-              alt=""
-            />
-            <p className="ser-name">
-              Oriental Spa Manicure <br />
-              20 phút Phục hồi da mặt
-            </p>
-            <p className="ser-name">$30.00</p>
-          </div>
-        </div>
-        <div className="right-content">
-          <div className="cont">
-            <div className="name-title">
-              <p className="spa">Spa May</p>
-              <p className="head">HÃY ĐỂ CHÚNG TÔI PHỤC VỤ BẠN</p>
-            </div>
-            <button className="btn">Đặt dịch vụ </button>
-          </div>
-        </div>
-      </div>
-
-  );
+const ServiceCard = ({ img, name, price }) => {
+	return (
+		<div className="service">
+			<img src={img} alt="" />
+			<h4 className="service-name">{name}</h4>
+			<h4 className="service-price">
+				{NumberHelper.formatWithComma(price)} VNĐ
+			</h4>
+		</div>
+	);
 };
-export default Services;
+
+const ServicesPrice = () => {
+	const [serviceList, setServiceList] = useState([]);
+	useEffect(() => {
+		const getServiceList = async () => {
+			setServiceList(
+				(await axios.get(SERVICES_API_URL, { displayAtHome: true })).data.data
+			);
+		};
+		getServiceList();
+	}, []);
+	return (
+		<section className="services-price_section">
+			<div className="left-content">
+				<SectionTitle title="Bảng giá dịch vụ" />
+				<div className="service-container">
+					{serviceList.map((service) => (
+						<ServiceCard
+							key={service.id}
+							img="http://mauweb.monamedia.net/helenspa/wp-content/uploads/2019/07/Procedure-11-150x150.jpg"
+							name={service.name}
+							price={service.price}
+						/>
+					))}
+				</div>
+			</div>
+			<div className="right-content">
+				<div className="cont">
+					<SectionTitle title="HÃY ĐỂ CHÚNG TÔI PHỤC VỤ BẠN" />
+					<a href="#booking-form" className="btn-go-to-booking">
+						Đặt dịch vụ{" "}
+					</a>
+				</div>
+			</div>
+		</section>
+	);
+};
+export default ServicesPrice;

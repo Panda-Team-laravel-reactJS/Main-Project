@@ -1,4 +1,6 @@
 @import "./variables";
+@import "./fonts";
+@import "./core-components";
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./home/index";
@@ -6,3 +8,27 @@
 @import "./error-page";
 @import "./contact/index";
 @import "./about-us/index";
+@import "./login/index";
+@import "./register/index";
+@import "./reset-password/index";
+
+* {
+	font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .wrapper {
+    max-width: 1600px;
+    width: 80%;
+  }
+}

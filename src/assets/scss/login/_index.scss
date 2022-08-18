@@ -1,0 +1,39 @@
+$login-adjustment: 8vw;
+.login_section {
+	min-height: 55vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.4rem;
+	font-weight: 600;
+	color: $primary-text-color;
+	& form {
+		& .login-title {
+			color: $primary-text-color;
+			margin-left: $login-adjustment;
+		}
+		& .form-input label {
+			width: $login-adjustment;
+		}
+		& .forgot-password {
+			margin-bottom: 1rem;
+			margin-left: $login-adjustment;
+			text-align: center;
+			& a {
+				text-decoration: none;
+				color: $primary-text-color;
+				font-weight: 500;
+
+				&:hover {
+					color: red;
+				}
+			}
+		}
+		& .form-button {
+			margin-left: $login-adjustment;
+		}
+		& .login-error {
+			margin-left: $login-adjustment;
+		}
+	}
+}

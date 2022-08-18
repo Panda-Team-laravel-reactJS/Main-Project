@@ -1,66 +1,77 @@
 .service-category {
-  margin: 3rem 10%;
+	padding: 2rem 10%;
 
-  & .title {
-    text-align: center;
-    color: #620300;
-    font-size: 170%;
-    margin: 1rem 0;
-  }
+	& .title {
+		text-align: center;
+		color: #620300;
+		margin: 1rem 0;
 
-  & .category-content {
-    display: flex;
-    gap: 2rem;
-    & .services-container {
-      width: 50%;
-      height: 50vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      overflow-y: scroll;
+		& h1 {
+			font-size: 2.5rem;
+		}
+	}
 
-      & .service {
-        display: flex;
-        margin-bottom: 1rem;
-        justify-content: space-between;
-        border: 9px solid #fff;
-        width: 100%;
-        background-color: #bcb294;
-        padding: 1rem 5rem;
-        color: #620300;
-      }
-      & h3 {
-        font-size: 150%;
-      }
-      & .service-btn {
-        margin: auto 0;
-        box-sizing: border-box;
+	& .category-content {
+		display: flex;
+		gap: 2rem;
+		& .services-container {
+			width: 50%;
+			height: 50vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			overflow-y: scroll;
 
-        & .btn-book-now {
-          padding: 0.5rem 1rem;
-          display: center;
-          background-color: whitesmoke;
-          color: #a50f0a;
-          font-size: 1.3rem;
-          box-shadow: #620300 2px 2px 4px;
-          border: transparent;
-          width: 5rem;
-          transition: width 1s ease-iout;
+			& .service {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 1rem;
+				height: 30%;
+				width: 100%;
+				// background-color: #ffe590;
+				background-color: #ffeeb8;
+				padding: 0.5em 2rem;
+				color: #620300;
+			}
+			& h3 {
+				font-size: 1.2rem;
+			}
+			& .service-btn {
+				margin: auto 0;
+				box-sizing: border-box;
 
-          &:hover {
-            cursor: pointer;
-            font-weight: 900;
-            width: 120%;
-          }
-        }
-      }
-    }
-    & img {
-      width: auto;
-      height: 50vh;
-    }
-  }
-  &:nth-child(2n + 1) .category-content {
-    flex-direction: row-reverse;
-  }
+				& .btn-book-now {
+					padding: 0.5rem 1rem;
+					display: center;
+					background-color: whitesmoke;
+					color: #a50f0a;
+					font-size: 1.3rem;
+					box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+					border: transparent;
+					width: 10rem;
+					transition: width 1s ease-iout;
+
+					&:hover {
+						cursor: pointer;
+						box-shadow: #620300 2px 2px 4px;
+						color: #fff;
+						background: #620300;
+						font-weight: 900;
+					}
+				}
+			}
+		}
+		& img {
+			width: 50%;
+			height: 50vh;
+			object-fit: cover;
+			object-fit: 0 0;
+		}
+	}
+	&:nth-child(2n + 1) {
+		background-color: #fff6dcaf;
+	}
+	&:nth-child(2n + 1) .category-content {
+		flex-direction: row-reverse;
+	}
 }

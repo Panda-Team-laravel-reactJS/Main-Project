@@ -1,3 +1,4 @@
-import AboutUs from "./AboutUs";
+import Staff from "./Staff";
+import Introduction from "./Introduction";
 
-export {AboutUs}
+export {Staff, Introduction}

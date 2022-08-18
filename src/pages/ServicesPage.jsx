@@ -1,13 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { ServiceCategory } from "../components/services";
-import { BASE_API_URL, CATEGORIES } from "../utils/constants";
+import { CATEGORIES_API_URL } from "../utils/constants";
 
 const ServicesPage = () => {
   const [cateList, setCateList] = useState([]);
   useEffect(() => {
     const getData = async () => {
-      const res = await axios.get(BASE_API_URL + CATEGORIES);
+      const res = await axios.get(CATEGORIES_API_URL);
       setCateList(res.data.data);
     };
     getData();
@@ -16,7 +16,7 @@ const ServicesPage = () => {
   return cateList.map((cate) => (
     <ServiceCategory
       key={cate.id}
-      img="https://cdn.diemnhangroup.com/seoulacademy/spa-co-nhung-dich-vu-gi-1.jpg"
+      img={cate.image}
       name={cate.name}
       list={cate.serviceList.data}
     />

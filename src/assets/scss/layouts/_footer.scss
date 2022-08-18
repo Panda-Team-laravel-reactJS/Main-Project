@@ -7,6 +7,7 @@
 	font: bold 16px sans-serif;
 	text-align: left;
 	padding: 50px 60px 40px;
+	margin-top: 3rem;
 	overflow: hidden;
 }
 
@@ -18,9 +19,9 @@
 
 /* The company logo */
 
-.footer-distributed h3{
+.footer-distributed h3, .footer-distributed h3 span{
 	color:  #5f5842;
-	font: normal 36px 'Roboto', cursive;
+	font-size: 2rem;
 	margin: 0 0 10px;
 }
 

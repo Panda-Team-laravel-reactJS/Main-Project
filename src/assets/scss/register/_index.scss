@@ -1,0 +1,28 @@
+$register-adjustment: 8vw;
+.register_section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.4rem;
+	font-weight: 600;
+	color: $primary-text-color;
+  & form {
+    & .error {
+      margin-left: $register-adjustment;
+    }
+    & .register-title {
+      color: $primary-text-color;
+      margin-left: $register-adjustment - 3;
+    }
+    & label {
+      width: $register-adjustment
+    }
+    & .form-button {
+      margin-left: $register-adjustment;
+    }
+    & .loading {
+      margin-left: $register-adjustment - 4;
+      margin-top: 1rem;
+    }
+  }
+}

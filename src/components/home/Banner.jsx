@@ -13,9 +13,9 @@ const Banner = () => {
               alt=""
             />
             <div className="content">
-              <h1>MAY Spa</h1>
-              <h2>KHÁM PHÁ THẾ GỚI SPA</h2>
-              <h4>
+              <h1 style={{fontSize: "1.5rem"}}>May Spa</h1>
+              <h2>KHÁM PHÁ THẾ GIỚI SPA</h2>
+              <h4 style={{lineHeight: "1.5rem"}}>
                 Chúng tôi hiểu rằng thư giãn thực sự là một hình thức nghệ
                 thuật. Kết hợp một bài massage phù hợp với dịch vị chăm sóc da
                 nói chung và mặt nói riêng, hoặc các dịch vụ thẩm mỹ khác. Khách

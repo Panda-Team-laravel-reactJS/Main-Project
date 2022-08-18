@@ -6,7 +6,7 @@ import FormContact from '../components/contact/form_contact';
 
 const ContactPage = () => {
   return (
-        <section className='contact-section'>
+        <section className='contact_section'>
             <InforContact/>
             <FormContact/>
         </section>

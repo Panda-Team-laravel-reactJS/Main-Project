@@ -1,86 +1,54 @@
-const Reason = () => {
-  return (
-    <div className="reason">
-      <div className="name-title">
-        <p className="spa">Spa May</p>
-        <p className="head">HÃY ĐẾN VỚI SPA MÂY</p>
-      </div>
-      <div className="re">
-        <div className="re1">
-          <img
-            src="http://mauweb.monamedia.net/helenspa/wp-content/uploads/2019/06/ic1.png"
-            alt=""
-          />
-          <p>Break from Routine</p> <br />
-          <hr /> <br />
-          <p>
-            Cách tốt nhất để thư giãn hoàn toàn và giảm căng thẳng cho chính
-            mình.
-          </p>
-        </div>
-        <div className="re1">
-          <img
-            src="http://mauweb.monamedia.net/helenspa/wp-content/uploads/2019/06/ic6.png"
-            alt=""
-          />
-          <p>Improves Blood Circulation</p>
-          <br />
-          <hr />
-          <br />
-          <p>Cung cấp thêm oxy & chất dinh dưỡng cho các tế bào.</p>
-        </div>
-        <div className="re1">
-          <img
-            src="http://mauweb.monamedia.net/helenspa/wp-content/uploads/2019/06/ic8.png"
-            alt=""
-          />
-          <p>Manage Chronic Conditions</p>
-          <br />
-          <hr />
-          <br />
-          <p>
-            Liệu pháp xoa bóp mang lại lợi ích vượt trội cho việc kiểm soát cơn
-            đau.
-          </p>
-        </div>
-        <div className="re1">
-          <img
-            src="http://mauweb.monamedia.net/helenspa/wp-content/uploads/2019/06/ic9.png"
-            alt=""
-          />
-          <p>Body Mind & Soul</p>
-          <br />
-          <hr />
-          <br />
-          <p>
-            Spa cải thiện cảm giác tốt và mang lại sự hài hòa cho cơ thể, tâm
-            trí và tâm hồn.
-          </p>
-        </div>
-        <div className="re1">
-          <img
-            src="http://mauweb.monamedia.net/helenspa/wp-content/uploads/2019/06/ic7.png"
-            alt=""
-          />
-          <p>Deep Tissue Massage</p>
-          <br />
-          <hr />
-          <br />
-          <p>Chuyên gia trị liệu làm giảm căng thẳng cơ bắp và chuột rút.</p>
-        </div>
-        <div className="re1">
-          <img
-            src="http://mauweb.monamedia.net/helenspa/wp-content/uploads/2019/06/ic10.png"
-            alt=""
-          />
-          <p>Keeping Fit & Healthy</p>
-          <br />
-          <hr />
-          <br />
-          <p>Spa giảm cân thêm để giữ cho cơ thể của bạn trong hình dạng.</p>
-        </div>
-      </div>
-    </div>
-  );
+import { SectionTitle } from "../core";
+
+const ReasonCard = ({ img, title, description }) => {
+	return (
+		<div className="reason-card">
+			<img src={img} alt="" />
+			<h3>{title}</h3>
+			<hr />
+			<p>{description}</p>
+		</div>
+	);
 };
-export default Reason;
+
+const Reason = () => {
+	return (
+		<section className="reason_section">
+			<SectionTitle title="HÃY ĐẾN VỚI CHÚNG TÔI" />
+			<div className="reason-container">
+				<ReasonCard
+					img="/images/reason/rs1.png"
+					title="Break from Routine"
+					description="Cách tốt nhất để thư giãn hoàn toàn và giảm căng thẳng cho chính mình."
+				/>
+				<ReasonCard
+					img="/images/reason/rs2.png"
+					title="Improves Blood Circulation"
+					description="Cung cấp thêm oxy & chất dinh dưỡng cho các tế bào."
+				/>
+				<ReasonCard
+					img="/images/reason/rs3.png"
+					title="Manage Chronic Conditions"
+					description="Liệu pháp xoa bóp mang lại lợi ích vượt trội cho việc kiểm soát cơn đau."
+				/>
+				<ReasonCard
+					img="/images/reason/rs4.png"
+					title="Body Mind & Soul"
+					description="Spa cải thiện cảm giác tốt và mang lại sự hài hòa cho cơ thể, tâm
+						trí và tâm hồn."
+				/>
+				<ReasonCard
+					img="/images/reason/rs5.png"
+					title="Deep Tissue Massage"
+					description="Chuyên gia trị liệu làm giảm căng thẳng cơ bắp và chuột rút."
+				/>
+				<ReasonCard
+					img="/images/reason/rs6.png"
+					title="Keeping Fit & Healthy"
+					description="Spa giảm cân thêm để giữ cho cơ thể của bạn trong hình dạng."
+				/>
+        </div>
+		</section>
+	);
+};
+export { Reason as default, ReasonCard };

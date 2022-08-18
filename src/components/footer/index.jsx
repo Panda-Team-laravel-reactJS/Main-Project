@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Footer = () => {
   return (
     <footer className="footer-distributed">
@@ -7,15 +9,13 @@ const Footer = () => {
 				<h3>May<span>Spa</span></h3>
 
 				<p className="footer-links">
-					<a href="/">Trang Chủ</a>
+					<Link to="/">Trang Chủ</Link>
 					·
-					<a href="/aboutus">Giới Thiệu</a>
+					<Link to="/AboutUs">Giới Thiệu</Link>
 					·
-					<a href="#">Dịch vụ</a>
+					<Link to="/Services">Dịch vụ</Link>
 					·
-					<a href="#">Tin Tức</a>
-					·
-					<a href="#">Liên Hệ</a>
+					<Link to="/Contact">Liên Hệ</Link>
 				</p>
 
 				<div className="footer-icons">

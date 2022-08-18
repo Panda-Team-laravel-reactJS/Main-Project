@@ -1,7 +1,11 @@
-import { AboutUs } from "../components/about-us"
+import { Introduction, Staff } from "../components/about-us";
+
 const AboutUsPage = () => {
     return (
-        <AboutUs/>
-    )
+			<section className="about-us_section">
+        <Introduction />
+				<Staff />
+			</section>
+		);
 }
 export default AboutUsPage

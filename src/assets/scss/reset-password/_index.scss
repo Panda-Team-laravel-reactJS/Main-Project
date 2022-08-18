@@ -1,0 +1,27 @@
+$reset-password-adjustment: 5vw;
+.reset-password {
+	&_section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& form {
+			& .error {
+				margin-left: $reset-password-adjustment;
+			}
+			& label {
+				width: $reset-password-adjustment;
+			}
+			& .form-button {
+				margin-left: $reset-password-adjustment;
+			}
+			& .loading {
+				margin-left: $reset-password-adjustment - 2;
+				margin-top: 1rem;
+			}
+		}
+	}
+	&-title {
+		color: $primary-text-color;
+		margin-left: $reset-password-adjustment - 2;
+	}
+}

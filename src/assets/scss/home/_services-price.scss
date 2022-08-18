@@ -1,0 +1,70 @@
+.services-price_section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+	margin: 2rem auto;
+	& .left-content {
+		margin: 0 2rem;
+		padding: 0 1rem;
+		& .service {
+			&-container {
+				height: 50vh;
+				overflow-y: scroll;
+			}
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-right: 5rem;
+			height: 16vh;
+			&:hover {
+				// box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+				// 	rgba(0, 0, 0, 0.23) 0px 3px 6px;
+				box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+			}
+			&-name {
+				padding: 0 1.5rem;
+			}
+			&-price {
+				text-align: center;
+				color: red;
+			}
+			&-name,
+			&-price {
+				font-size: 1.2rem;
+				font-family: "EB Garamond", serif !important;
+			}
+
+			& img {
+				width: 4rem;
+				height: 4rem;
+				border-radius: 50%;
+			}
+		}
+	}
+	& .right-content {
+		background-color: #ab9696;
+		position: relative;
+		& .cont {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+		& .btn-go-to-booking {
+			background-color: #fff;
+			margin-top: 20px;
+			padding: 0.5rem 2rem;
+			font-size: 1.2rem;
+			box-shadow: rgba(0, 0, 0, 0.15) 3px 5px 15px 5px;
+			border: transparent;
+			width: 10rem;
+			&:hover {
+				cursor: pointer;
+				font-weight: bold;
+				transform: scale(1.08) !important;
+			}
+		}
+	}
+}

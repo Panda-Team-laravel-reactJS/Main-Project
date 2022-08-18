@@ -1,3 +1,4 @@
+import { IMAGE_URL } from "../../utils/constants";
 import Service from "./Service";
 const ServiceCategory = ({ img, name, list }) => {
   return (
@@ -11,7 +12,7 @@ const ServiceCategory = ({ img, name, list }) => {
             <Service service={service} key={service.id} />
           ))}
         </div>
-        <img src={img} alt="" />
+        <img src={IMAGE_URL + img} alt="" />
       </div>
     </div>
   );

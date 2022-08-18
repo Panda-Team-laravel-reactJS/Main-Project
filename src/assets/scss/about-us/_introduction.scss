@@ -1,0 +1,34 @@
+.introduction {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: #f7f6ed;
+  padding: 2rem 5rem;
+  gap: 2rem;
+
+	& img {
+    width: 19.375rem;
+		height: 28.75rem;
+    object-fit: cover;
+    object-position: 50% 50%;
+	}
+	&-content {
+    width: 19.375rem;
+    & .top {
+      text-align: center;
+
+      & h1 {
+        font-size: 2rem;
+      }
+      & h2 {
+        font-size: 1.7rem;
+      }
+    }
+    & .bottom {
+      text-align: justify;
+      line-height: 1.5rem;
+      font-family: 'EB Garamond', serif!important;
+    }
+	}
+}

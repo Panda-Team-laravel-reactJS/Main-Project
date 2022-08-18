@@ -1,8 +1,9 @@
+import SectionTitle from "../core/SectionTitle";
+
 function FormContact() {
   return (
     <div className="container-form-contact">
-      <h1 className="title">SPA May</h1>
-      <h1 className="title"> ĐĂNG KÝ TƯ VẤN MIỄN PHÍ</h1>
+      <SectionTitle title="Hãy liên lạc với chúng tôi" className="title" />
       <form className="contact-form">
         <table className="contact-table">
           <tbody>

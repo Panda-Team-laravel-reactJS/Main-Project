@@ -1,0 +1,25 @@
+.reason {
+	&_section {
+		justify-content: center;
+		margin: 0 auto;
+		background-color: #F2EBD6;
+		padding: 1rem 10%;
+	}
+	&-container {
+		display: grid;
+		grid-template-columns: 33% 33% 33%;
+		grid-template-rows: 1fr 1fr;
+		padding: 1rem;
+	}
+	&-card {
+		text-align: center;
+		padding: 0 1rem;
+		margin: 1rem 0;
+		& p {
+			font-family: 'EB Garamond', serif!important;
+		}
+		& hr {
+			width: 30%;
+		}
+	}
+}
