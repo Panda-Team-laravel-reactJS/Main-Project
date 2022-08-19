@@ -13,6 +13,9 @@ $edit-info-adjustment: 7vw;
 			& .form-button {
 				margin-left: $edit-info-adjustment;
 			}
+			& .error {
+				margin-left: $edit-info-adjustment;
+			}
 		}
 	}
 	&-title {

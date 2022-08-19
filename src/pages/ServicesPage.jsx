@@ -1,13 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { ServiceCategory } from "../components/services";
-import { CATEGORIES_API_URL } from "../utils/constants";
+import { CATEGORIES_API_URL, CONFIG_CORS } from "../utils/constants";
 
 const ServicesPage = () => {
   const [cateList, setCateList] = useState([]);
   useEffect(() => {
     const getData = async () => {
-      const res = await axios.get(CATEGORIES_API_URL);
+      const res = await axios.get(CATEGORIES_API_URL, CONFIG_CORS);
       setCateList(res.data.data);
     };
     getData();

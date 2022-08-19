@@ -1,4 +1,4 @@
-export const BASE_URL = "https://mayspa.herokuapp.com/";
+export const BASE_URL = "http://localhost:8000/";
 //api const
 export const BASE_API_URL = BASE_URL + "api/";
 export const IMAGE_URL = BASE_URL + "assets/images/";
@@ -9,10 +9,19 @@ export const REGISTER_API_URL = BASE_API_URL + "account/register";
 export const RESET_PASSWORD_API_URL = BASE_API_URL + "account/reset-password";
 export const BOOKING_API_URL = BASE_API_URL + "booking";
 export const INFO_API_URL = BASE_API_URL + "customer/info";
+export const EDIT_INFO_API_URL = BASE_API_URL + "customer/edit";
 //session const
 export const USER_DATA_SESSION_KEY = "UserData";
 
 // others
+// CORS
+export const CONFIG_CORS = {
+	headers: {
+		"Access-Control-Allow-Origin": "*",
+		"Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+	},
+};
+//Default errors
 export const DEFAULT_REGISTER_ERRORS = {
 	name: "",
 	email: "",

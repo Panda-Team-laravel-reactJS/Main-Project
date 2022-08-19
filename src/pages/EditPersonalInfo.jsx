@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { FormInput, SectionTitle } from "../components/core";
-import { INFO_API_URL } from "../utils/constants";
+import swal from "sweetalert";
+import { Error, FormInput, SectionTitle } from "../components/core";
+import { EDIT_INFO_API_URL, INFO_API_URL } from "../utils/constants";
 import SessionHelper from "../utils/SessionHelper";
 
 const EditPersonalInfo = () => {
@@ -10,11 +11,15 @@ const EditPersonalInfo = () => {
 		phoneNumber: "",
 		address: "",
 	});
+	const [errors, setErrors] = useState({
+		phoneNumber: "",
+		address: ""
+	})
 	const navigate = useNavigate();
 	useEffect(() => {
 		const getData = async () => {
 			const {userName, accessToken} = SessionHelper.getUserData() || {userName: null, accessToken: null}
-			const {data} = axios.post(INFO_API_URL, {userName, accessToken})
+			const {data} = await axios.post(INFO_API_URL, {userName, accessToken})
 			console.log(data);
 			if (!data.status) {
 				return navigate('/Login')
@@ -26,8 +31,13 @@ const EditPersonalInfo = () => {
 	const changeInputHandler = (e) => {
 		setData({ ...data, [e.target.name]: e.target.value });
 	};
-	const submitHandler = (e) => {
+	const submitHandler = async (e) => {
 		e.preventDefault();
+		const {userName, accessToken} = SessionHelper.getUserData()
+		const {data: res} = await axios.post(EDIT_INFO_API_URL, {...data, userName, accessToken})
+		if (!res.status) return setErrors(res.errors)
+		await swal("Chỉnh sửa thông tin thành công!", "", "success")
+		navigate(-1)
 	};
 	return (
 		<div className="edit-info_section">
@@ -40,6 +50,7 @@ const EditPersonalInfo = () => {
 					onChange={changeInputHandler}
 					value={data.phoneNumber}
 				/>
+				{errors.phoneNumber && <Error description={errors.phoneNumber} />}
 				<FormInput
 					title="Địa chỉ: "
 					name="address"
@@ -47,6 +58,7 @@ const EditPersonalInfo = () => {
 					onChange={changeInputHandler}
 					value={data.address}
 				/>
+				{errors.address && <Error description={errors.address} />}
 				<div className="form-button">
 					<button type="submit">Thay đổi</button>
 				</div>
