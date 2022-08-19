@@ -14,7 +14,7 @@ const BookingForm = () => {
 		service: null,
 		expectedDate: "",
 		expectedTime: "",
-		username: SessionHelper.isLogedIn()
+		userName: SessionHelper.isLogedIn()
 			? SessionHelper.getUserData().userName
 			: "",
 			

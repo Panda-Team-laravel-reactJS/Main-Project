@@ -5,5 +5,6 @@ import AboutUsPage from "./AboutUsPage";
 import LoginPage from "./LoginPage";
 import RegisterPage from "./RegisterPage";
 import ResetPasswordPage from "./ResetPasswordPage";
+import EditPersonalInfo from "./EditPersonalInfo";
 
-export {HomePage, ServicesPage, ContactPage, AboutUsPage, LoginPage, RegisterPage, ResetPasswordPage}
+export {HomePage, ServicesPage, ContactPage, AboutUsPage, LoginPage, RegisterPage, ResetPasswordPage, EditPersonalInfo}

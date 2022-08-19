@@ -37,7 +37,7 @@ const ResetPasswordPage = () => {
 			else {
 				swal("Successfull!", "Bạn đã đổi mật khẩu thành công!\nHãy đăng nhập cùng MaySpa!", "success")
 				.then(() => {
-					navigate("/login")
+					navigate("/Login")
 				})
 			}
 		else setErrors(res.errors);
@@ -81,7 +81,7 @@ const ResetPasswordPage = () => {
 					</>
 				)}
 				<div className="form-button">
-					<button type="submit">Đăng ký</button>
+					<button type="submit">Lấy lại mật khẩu</button>
 				</div>
 				{isLoading && (
 					<div className="loading">

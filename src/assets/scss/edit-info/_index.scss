@@ -1,0 +1,22 @@
+$edit-info-adjustment: 7vw;
+.edit-info {
+	&_section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 50vh;
+		max-height: 900px;
+		& form {
+			& label {
+				width: $edit-info-adjustment;
+			}
+			& .form-button {
+				margin-left: $edit-info-adjustment;
+			}
+		}
+	}
+	&-title {
+		color: $primary-text-color;
+		margin-left: $edit-info-adjustment - 2;
+	}
+}

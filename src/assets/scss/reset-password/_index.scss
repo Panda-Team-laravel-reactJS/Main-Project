@@ -4,6 +4,8 @@ $reset-password-adjustment: 5vw;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		height:50vh;
+		max-height: 900px;
 		& form {
 			& .error {
 				margin-left: $reset-password-adjustment;

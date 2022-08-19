@@ -1,6 +1,6 @@
-export const BASE_URL = "http://localhost:8000/";
+export const BASE_URL = "https://mayspa.herokuapp.com/";
 //api const
-export const BASE_API_URL = "http://localhost:8000/api/";
+export const BASE_API_URL = BASE_URL + "api/";
 export const IMAGE_URL = BASE_URL + "assets/images/";
 export const CATEGORIES_API_URL = BASE_API_URL + "categories/";
 export const SERVICES_API_URL = BASE_API_URL + "service/";
@@ -8,6 +8,7 @@ export const LOGIN_API_URL = BASE_API_URL + "account/login";
 export const REGISTER_API_URL = BASE_API_URL + "account/register";
 export const RESET_PASSWORD_API_URL = BASE_API_URL + "account/reset-password";
 export const BOOKING_API_URL = BASE_API_URL + "booking";
+export const INFO_API_URL = BASE_API_URL + "customer/info";
 //session const
 export const USER_DATA_SESSION_KEY = "UserData";
 

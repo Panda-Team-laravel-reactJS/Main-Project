@@ -1,6 +1,7 @@
 $login-adjustment: 8vw;
 .login_section {
-	min-height: 55vh;
+	height: 50vh;
+	max-height: 900px;
 	display: flex;
 	justify-content: center;
 	align-items: center;

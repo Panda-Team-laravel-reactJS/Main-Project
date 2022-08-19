@@ -5,15 +5,14 @@ import { events } from "../../utils/EventEmitter";
 import SessionHelper from "../../utils/SessionHelper";
 
 const Header = () => {
-	const [isLogedIn, setIsLogedIn] = useState(SessionHelper.isLogedIn())
-	const navigate = useNavigate()
+	const [isLogedIn, setIsLogedIn] = useState(SessionHelper.isLogedIn());
+	const navigate = useNavigate();
 	const logout = async (e) => {
-		SessionHelper.setUserData(null)
-		setIsLogedIn(false)
-		navigate("/")
-		await swal("Đăng xuất thành công!", "", "success")
-
-	}
+		SessionHelper.setUserData(null);
+		setIsLogedIn(false);
+		navigate("/");
+		await swal("Đăng xuất thành công!", "", "success");
+	};
 	useEffect(() => {
 		events.on("logedIn", () => {
 			setIsLogedIn(true);
@@ -42,8 +41,16 @@ const Header = () => {
 							<div className="user-option">
 								<ul>
 									<li onClick={logout}>Đăng xuất</li>
-									<li>Chỉnh sửa thông tin cá nhân</li>
-									<li>Đổi mật khẩu</li>
+									<li onClick={() => navigate("/EditPersonalInfo")}>
+										Chỉnh sửa thông tin cá nhân
+									</li>
+									<li
+										onClick={() => {
+											navigate("/ResetPassword");
+										}}
+									>
+										Đổi mật khẩu
+									</li>
 								</ul>
 							</div>
 						</div>
