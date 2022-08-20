@@ -1,15 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { IMAGE_URL, STAFF_API_URL } from "../../utils/constants";
 import { SectionTitle } from "../core";
 
 const StaffCard = ({ staff }) => {
 	return (
 		<div className="staff-card">
 			<div className="img-cont">
-				<img
-					src="http://mauweb.monamedia.net/helenspa/wp-content/uploads/2019/06/Therapist-4-1.jpg"
-					alt=""
-				/>
+				<img src={IMAGE_URL + staff.image} alt="" />
 				<div className="overlay"></div>
 				<div className="btn-staff-booking">
 					<a href="#"> Đặt lịch hẹn ngay </a>
@@ -29,19 +27,29 @@ const StaffCard = ({ staff }) => {
 };
 
 const Staff = () => {
-	const [staffList, setStaffList] = useState([])
+	const [staffList, setStaffList] = useState([]);
 	useEffect(() => {
 		const getStaffList = async () => {
-			const staffList = await axios.get()
-		}
-	})
+			const { data: staffList } = (await axios.get(STAFF_API_URL)).data;
+			setStaffList(staffList);
+		};
+		getStaffList();
+	}, []);
+	console.log(staffList)
 	return (
 		<section className="staff_section">
 			<SectionTitle title="Đội ngũ nhân viên" />
+			<div className="owner">
+				{staffList.length !== 0 && <StaffCard
+					staff={staffList.filter(staff => staff.position === "Chủ Spa")[0]}
+				/>}
+			</div>
 			<div className="staff">
-				{[1, 2, 3].map((ele) => (
-					<StaffCard key={ele} staff={{ name: "Nguyen Dang Ky", position: "Owner" }} />
-				))}
+				{staffList
+					.filter((staff) => staff.position === "Nhân viên")
+					.map((staff) => (
+						<StaffCard key={staff.id} staff={staff} />
+					))}
 			</div>
 		</section>
 	);

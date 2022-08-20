@@ -55,7 +55,7 @@ const LoginPage = () => {
 					name="password"
 					type={pwdType}
 					title="Mật khẩu:"
-					placeholder="Nhập tên đăng nhập của bạn..."
+					placeholder="Nhập mật khẩu của bạn..."
 					value={data.password}
 					onChange={changeInputHandler}
 				/>

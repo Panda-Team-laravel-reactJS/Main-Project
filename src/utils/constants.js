@@ -2,6 +2,7 @@ export const BASE_URL = "http://localhost:8000/";
 //api const
 export const BASE_API_URL = BASE_URL + "api/";
 export const IMAGE_URL = BASE_URL + "assets/images/";
+export const STAFF_API_URL = BASE_API_URL + "staff";
 export const CATEGORIES_API_URL = BASE_API_URL + "categories/";
 export const SERVICES_API_URL = BASE_API_URL + "service/";
 export const LOGIN_API_URL = BASE_API_URL + "account/login";
@@ -12,7 +13,6 @@ export const INFO_API_URL = BASE_API_URL + "customer/info";
 export const EDIT_INFO_API_URL = BASE_API_URL + "customer/edit";
 //session const
 export const USER_DATA_SESSION_KEY = "UserData";
-
 // others
 // CORS
 export const CONFIG_CORS = {

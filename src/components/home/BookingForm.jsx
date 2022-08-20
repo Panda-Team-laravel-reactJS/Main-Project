@@ -13,11 +13,7 @@ const BookingForm = () => {
 		category: null,
 		service: null,
 		expectedDate: "",
-		expectedTime: "",
-		userName: SessionHelper.isLogedIn()
-			? SessionHelper.getUserData().userName
-			: "",
-			
+		expectedTime: ""
 	});
 	const [errors, setErrors] = useState(DEFAULT_BOOKING_ERRORS);
 	const navigate = useNavigate()
@@ -44,7 +40,8 @@ const BookingForm = () => {
 			await swal("Bạn chưa đăng nhập!", "Vui lòng đăng nhập để có thể đăng kí dịch vụ!", "warning")
 			return navigate("/Login")
 		}
-		const {data: res} = await axios.post(BOOKING_API_URL, data)
+		const {userName, accessToken} = SessionHelper.getUserData() || {userName: null, accessToken: null}
+		const {data: res} = await axios.post(BOOKING_API_URL, {...data, userName, accessToken})
 		if (!res.status) {
 			console.log(res.errors);	
 			if (res.errors.accessToken) {
@@ -54,6 +51,7 @@ const BookingForm = () => {
 			return setErrors(res.errors) 
 		}
 		await swal("Quý khách đặt dịch vụ thành công!", "Hãy xem thêm nhiều dịch vụ khác nhé!", "success")
+		setErrors(DEFAULT_BOOKING_ERRORS)
 	};
 	return (
 		<section className="booking-form_section" id="booking-form">

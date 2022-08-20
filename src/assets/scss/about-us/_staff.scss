@@ -1,8 +1,14 @@
-.staff_section {
-	background-color: #F2EBD6;
-	padding: 2rem 0;
-}
 .staff {
+	&_section {
+		background-color: #f2ebd6;
+		padding: 2rem 0;
+		& .owner {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 2rem;
+		}
+	}
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -22,6 +28,8 @@
 				width: 15.625rem;
 				height: 20rem;
 				left: 0;
+				object-fit: cover;
+				object-position: 0 0;
 				border-radius: 0.313rem;
 				transition: all 1s;
 			}
